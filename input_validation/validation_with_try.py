@@ -21,7 +21,6 @@ def average(score1, score2, score3):
         return float((score1 + score2 + score3) / NUMBER_TESTS)
     except ValueError:
         raise ValueError
-    print("no negative numbers")
 
 
 if __name__ == '__main__':
@@ -31,9 +30,13 @@ if __name__ == '__main__':
     s1 = input("Enter score 1: ")
     s2 = input("Enter score 2: ")
     s3 = input("Enter score 3: ")
-    average_scores = average(int(s1), int(s2), int(s3))
-    print(f'{last_name}, {first_name} age: {age} average grade: {average_scores:.2f}')
-
+    try:
+        if int(s1) < 0 or int(s2) < 0 or int(s3) < 0:
+            raise ValueError
+            average_scores = average(int(s1), int(s2), int(s3))
+            print(f'{last_name}, {first_name} age: {age} average grade: {average_scores:.2f}')
+    except ValueError:
+        raise ValueError
 """
 test run 
 Enter your last name: Sam
