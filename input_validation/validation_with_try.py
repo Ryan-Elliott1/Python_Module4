@@ -14,9 +14,11 @@ def average(score1, score2, score3):
         if score1 < 0:
             raise ValueError
         elif score2 < 0:
-            raise  ValueError
+            raise ValueError
+        elif score3 < 0:
+            raise ValueError
         NUMBER_TESTS = 3
-        return float((score1 + score2 + score3)/NUMBER_TESTS)
+        return float((score1 + score2 + score3) / NUMBER_TESTS)
     except ValueError:
         raise ValueError
     print("no negative numbers")
