@@ -22,7 +22,7 @@ class FunctionTestCase(unittest.TestCase):
         self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .2), 5.46)
 
     def test_price_under_ten_to_thirty1(self):
-        self.assertAlmostEqual(coupon_calculations.calculate_price(22, 5, .1), 24.65)
+        self.assertAlmostEqual(coupon_calculations.calculate_price(22, 5, .1), 24.64)
 
     def test_price_under_ten_to_thirty2(self):
         self.assertAlmostEqual(coupon_calculations.calculate_price(22, 5, .15), 23.74)

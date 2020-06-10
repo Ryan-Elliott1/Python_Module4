@@ -7,8 +7,14 @@ def calculate_price(price, cash_coupon, percent_coupon):
         total = (total + (total * tax_rate))
         total = round(total, 2)
         return total
+    elif 10 < price < 30:
+        total = price - cash_coupon
+        total = (total - (total * percent_coupon)) + 7.95
+        total = (total + (total * tax_rate))
+        total = round(total, 2)
+        return total
 
 
 if __name__ == '__main__':
-    print(calculate_price(9, 10, .2))
+    print(calculate_price(9, 5, .1))
 
