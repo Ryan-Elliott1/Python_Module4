@@ -13,13 +13,13 @@ class FunctionTestCase(unittest.TestCase):
         self.assertAlmostEqual(coupon_calculations.calculate_price(9, 5, .2), 9.34)
 
     def test_price_under_ten4(self):
-        self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .1), 4.92)
+        self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .1), 5)
 
     def test_price_under_ten5(self):
-        self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .15), 4.87)
+        self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .15), 5.05)
 
     def test_price_under_ten6(self):
-        self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .2), 4.82)
+        self.assertAlmostEqual(coupon_calculations.calculate_price(9, 10, .2), 5.10)
 
 
 if __name__ == '__main__':
