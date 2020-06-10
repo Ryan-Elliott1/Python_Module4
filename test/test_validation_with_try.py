@@ -8,5 +8,4 @@ class FunctionTestCase(unittest.TestCase):
             validation_with_try.average(-90, 89, 78)
 
 
-if __name__ == '__main__':
-    unittest.main()
+

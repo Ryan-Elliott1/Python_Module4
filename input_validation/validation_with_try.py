@@ -1,7 +1,7 @@
 """
-Program: average_scores.py
+Program: validation_with_try.py
 Author: Ryan Elliott
-Last date modified: 06/07/2020
+Last date modified: 06/10/2020
 
 This program takes information about the user and 3 test scores and outputs the average of their scores
 input first and last name, age and 3 test scores
@@ -10,8 +10,14 @@ outputs users information and the average of their scores
 
 
 def average(score1, score2, score3):
-    NUMBER_TESTS = 3
-    return float((score1 + score2 + score3)/NUMBER_TESTS)
+    try:
+        if score1 < 0:
+            raise ValueError
+        NUMBER_TESTS = 3
+        return float((score1 + score2 + score3)/NUMBER_TESTS)
+    except ValueError:
+        raise ValueError
+    print("no negative numbers")
 
 
 if __name__ == '__main__':
